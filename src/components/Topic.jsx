@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Topic = ({ topic }) => {
-    const { id, name, logo, total } = topic
+
+    const { id, name, logo, total } = topic;
+    const navigate = useNavigate()
+    const handleStartQuiz = () => {
+        navigate(`/topic/${id}`)
+        console.log('click')
+    }
     return (
         <div>
 
@@ -9,9 +16,10 @@ const Topic = ({ topic }) => {
                 <figure><img src={logo} alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
+                    <h2 > Total: {total}</h2>
 
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Start Practice</button>
+                        <button onClick={handleStartQuiz} className="btn btn-primary">Start Practice</button>
                     </div>
                 </div>
             </div>
