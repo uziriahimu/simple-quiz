@@ -4,12 +4,12 @@ import { useLoaderData } from 'react-router-dom';
 
 const CorrectAnswer = () => {
     const answer = useLoaderData()
-    const { correctAnswer } = answer
+    // const { correctAnswer } = answer
     console.log(answer)
 
     return (
         <div>
-            <p>{correctAnswer}</p>
+            {/* <p>{correctAnswer}</p> */}
         </div>
     );
 };
