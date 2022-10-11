@@ -1,20 +1,21 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Statistic from './Statistic';
 
-
+import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Statistics = () => {
-    const topicsData = useLoaderData();
-    const topics = topicsData.data
+    const statistic = useLoaderData();
+    // console.log(statistic)
+
     return (
-        <div>
-            {
-                topics.map(topic => <Statistic
-                    key={topic.id}
-                    topic={topic}
-                ></Statistic>)
-            }
+        <div className='mt-10 mb-40'>
+            <LineChart width={500} height={400} data={statistic.data}>
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Line type="monotone" dataKey="total" stroke="#8884d8" />
+
+                <Tooltip />
+            </LineChart>
 
         </div>
     );

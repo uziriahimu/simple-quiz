@@ -2,15 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { toast } from 'react-toastify'
 
-import { useNavigate } from 'react-router-dom';
-
 
 
 const Quiz = ({ questions }) => {
     const correct = () => toast.success('Correct Answer!', { autoClose: 500 })
     const wrong = () => toast.warning('Wrong Answer!', { autoClose: 500 })
 
-    const { options, question, id, correctAnswer } = questions
+    const { options, question, correctAnswer } = questions
 
     const correctHandler = (ans) => {
         if (ans === correctAnswer) {
