@@ -7,7 +7,7 @@ const Topic = ({ topic }) => {
     const navigate = useNavigate()
     const handleStartQuiz = () => {
         navigate(`/topic/${id}`)
-        console.log('click')
+
     }
     return (
         <div>
