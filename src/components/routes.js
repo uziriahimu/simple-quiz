@@ -3,8 +3,6 @@ import Main from "../layout/Main";
 import Blog from "./Blog";
 import CorrectAnswer from "./CorrectAnswer";
 import ErrorPage from "./Error";
-import Home from "./Home";
-import Topic from "./Topic";
 import TopicDetails from "./TopicDetails";
 import Topics from "./Topics";
 
@@ -14,10 +12,6 @@ export const router = createBrowserRouter([
         element: <Main></Main>,
 
         children: [
-            {
-                path: '/home',
-                element: <Home></Home>
-            },
             {
                 path: '/',
                 element: <Topics></Topics>
