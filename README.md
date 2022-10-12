@@ -4,3 +4,5 @@ when you click on the start practice button quiz will start.
 statistic contain the rechart of the quiz total.
 Blog contain some question and their corresponding ans..
 For this assignment i use tailwind framework...
+
+live link:https://stunning-hamster-42527c.netlify.app/
