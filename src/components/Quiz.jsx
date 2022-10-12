@@ -34,7 +34,7 @@ const Quiz = ({ questions }) => {
                         <button onClick={CorrectAnswer}><FontAwesomeIcon className='text-2xl' icon={faEye}></FontAwesomeIcon></button>
 
                     </div>
-                    <div className=' lg:grid grid-rows-2 grid-flow-col gap-4 ' >
+                    <div className='flex flex-col lg:grid grid-rows-2 grid-flow-col gap-4 ' >
                         {options.map(option => <label className='border-2 bg-purple-300 p-3'>
                             <input onClick={() => correctHandler(option)} type='radio' value='option1' />
                             {option}
