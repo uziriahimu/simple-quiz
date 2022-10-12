@@ -8,8 +8,8 @@ const Statistics = () => {
     // console.log(statistic)
 
     return (
-        <div className=' mt-10 mb-40 lg:flex align-center justify-center'>
-            <LineChart width={400} height={400} data={statistic.data}>
+        <div className=' mt-10 mb-40 lg:flex align-center justify-center '>
+            <LineChart width={370} height={400} data={statistic.data}>
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Line type="monotone" dataKey="total" stroke="#8884d8" />
