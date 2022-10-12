@@ -1,5 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
+
 
 const Topic = ({ topic }) => {
 
@@ -19,7 +22,7 @@ const Topic = ({ topic }) => {
                     <h2 > Total: {total}</h2>
 
                     <div className="card-actions justify-end">
-                        <button onClick={handleStartQuiz} className="btn btn-primary">Start Practice</button>
+                        <button onClick={handleStartQuiz} className="btn btn-primary">Start Practice <FontAwesomeIcon className='ml-5 text-xl' icon={faArrowAltCircleRight}></FontAwesomeIcon> </button>
                     </div>
                 </div>
             </div>

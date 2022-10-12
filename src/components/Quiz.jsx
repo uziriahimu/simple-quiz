@@ -4,13 +4,19 @@ import { toast } from 'react-toastify'
 
 
 
+
 const Quiz = ({ questions }) => {
+    const ans = () => toast.success(`Correct Answer is :${correctAnswer}`)
     const correct = () => toast.success('Correct Answer!', { autoClose: 500 })
     const wrong = () => toast.warning('Wrong Answer!', { autoClose: 500 })
 
     const { options, question, correctAnswer } = questions
 
+    const CorrectAnswer = () => {
+        ans()
+    }
     const correctHandler = (ans) => {
+
         if (ans === correctAnswer) {
             correct()
         }
@@ -25,7 +31,7 @@ const Quiz = ({ questions }) => {
                 <li>
                     <div className='flex align-center justify-between '>
                         <h1 className='text-xl mb-8 border-2 py-3 px-10 bg-purple-400' ><strong>Question:</strong>{question}</h1>
-                        <button><FontAwesomeIcon className='text-2xl' icon={faEye}></FontAwesomeIcon></button>
+                        <button onClick={CorrectAnswer}><FontAwesomeIcon className='text-2xl' icon={faEye}></FontAwesomeIcon></button>
 
                     </div>
                     <div className=' lg:grid grid-rows-2 grid-flow-col gap-4 ' >

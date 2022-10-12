@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "./Blog";
 import ErrorPage from "./Error";
+import Home from "./Home";
 import Statistics from "./Statistics";
 import TopicDetails from "./TopicDetails";
 import Topics from "./Topics";
@@ -14,7 +15,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Topics></Topics>
+                element: <Home></Home>
+            },
+            {
+                path: '/home',
+                element: <Home></Home>
             },
             {
                 path: '/topic/:topicId',
